@@ -217,7 +217,9 @@ table td .remove {
   justify-content: center;
   gap: 6rem;
 
-  padding-top: 10rem;
+
+  background-color: #030B0D;
+  height: 33rem;
 }
 
 .no-favorites img{
