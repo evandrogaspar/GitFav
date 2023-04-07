@@ -111,6 +111,7 @@ header{
 
 
 table{
+  position: relative;
   width: 100%;
   border-collapse: collapse;
 }
@@ -122,6 +123,11 @@ table *{
   color: var(--tt-color);
 }
 
+thead > tr > th {
+  position: sticky;
+  top: 0;
+}
+
 table th {
   background: var(--th-color);
   
@@ -130,14 +136,6 @@ table th {
   text-align:left;
 
   padding: 1.6rem 2.4rem;
-}
-
-table th:first-child{
-  border-top-left-radius: 1.2rem;
-}
-
-table th:last-child{
-  border-top-right-radius: 1.2rem;
 }
 
 table tr:nth-child(odd){
@@ -188,4 +186,53 @@ table td .remove {
   color: red;
 
   cursor: pointer;
+}
+
+.table-data{
+  overflow-y: overlay;
+  overflow-x: hidden;
+
+  min-height: 40rem;
+  max-height: 40rem;
+
+  border: 2px solid #4a808c;
+  border-radius: .8rem;
+}
+
+.table-data::-webkit-scrollbar{
+  width: .5rem;
+}
+
+.table-data::-webkit-scrollbar-thumb{
+  background: #4a808c;
+
+  border-radius: .5rem;
+  border: 2px solid #4a808c;
+
+}
+
+.no-favorites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+
+  padding-top: 10rem;
+}
+
+.no-favorites img{
+  width: 13rem;
+}
+
+.no-favorites p{
+  font-family: var(--ff-text);
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 2.5rem;
+
+  color:  #4E5455;
+}
+
+.hide{
+  display: none;
 }
